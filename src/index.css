@@ -7,11 +7,12 @@
     box-sizing: border-box;
   }
   
+  /* Global Styles */
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: black;  /* Set the whole body background to black */
+    color: green;  /* Set the text color to green */
     line-height: 1.6;
-    color: #333;
   }
   
   a {
@@ -25,34 +26,34 @@
   
   /* Root variables for easier customization */
   :root {
-    --primary-color: #007bff;
+    --primary-color: #007bff; /* Blue color */
     --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --text-color: #333;
-    --link-color: #007bff;
+    --background-color: black; /* Black background */
+    --text-color: green; /* Green text */
+    --link-color: #007bff; /* Blue links */
     --font-family: 'Arial', sans-serif;
     --font-size-base: 16px;
     --font-size-lg: 18px;
     --font-size-xl: 24px;
   }
   
-  /* Global Styles */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica', sans-serif;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+  /* Header, Footer styles */
+  .header, .footer {
+    background-color: black;  /* Set header/footer background to black */
+    color: green;  /* Green text color */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid green;  /* Optional border for separation */
   }
   
-  h1 {
+  .header h1 {
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
   
-  h2 {
-    font-size: 2rem;
-  }
-  
-  p {
-    margin-bottom: 1.5rem;
+  .footer p {
+    font-size: var(--font-size-base);
+    margin-top: 10px;
   }
   
   /* Layout and Container Styles */
@@ -61,13 +62,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
-  }
-  
-  .header, .footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
   }
   
   .main-content {
@@ -79,21 +73,21 @@
   
   .sidebar {
     flex: 1;
-    background-color: white;
+    background-color: black;
     padding: 1.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);  /* Subtle green shadow */
   }
   
   .content {
     flex: 3;
-    background-color: white;
+    background-color: black;
     padding: 1.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);  /* Subtle green shadow */
   }
   
   /* Button Styles */
   button {
-    background-color: var(--primary-color);
+    background-color: green;
     color: white;
     font-size: var(--font-size-lg);
     border: none;
@@ -104,21 +98,22 @@
   }
   
   button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: darkgreen;
   }
   
   /* Card Styles */
   .card {
-    background-color: white;
+    background-color: black;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.1);  /* Green shadow for card */
     margin-bottom: 1.5rem;
   }
   
   .card-header {
     font-size: 1.25rem;
     font-weight: bold;
+    color: green;
   }
   
   .card-body {

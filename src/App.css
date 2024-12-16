@@ -1,83 +1,98 @@
-/* App.css */
-
-/* General Styles */
+/* Global styles */
 body {
-    background-color: #121212;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background-color: black;  /* Set the whole body background to black */
+    color: green;  /* Set the text color to green */
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-  }
-  
-  /* Header Styling */
-  .header {
-    background-color: #1e1e1e;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
-    color: #00ff00;
-  }
-  
-  /* Navigation Styling */
-  .navigation {
-    background-color: #222;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 20px; /* Spacing between header and nav */
-  }
-  
-  .navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+}
+
+/* Container to hold all content */
+.container {
     display: flex;
-    justify-content: center; /* Centers the nav items */
-  }
-  
-  .navigation li {
-    margin: 0 20px; /* Space between each link */
-  }
-  
-  .navigation a {
-    color: #00ff00;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: 2px solid transparent; /* Border for the hover effect */
-    transition: color 0.3s ease, border-color 0.3s ease;
-    display: inline-block; /* Ensures the link acts like a button */
-    text-transform: uppercase; /* Makes text uppercase for button-like appearance */
-  }
-  
-  .navigation a:hover {
-    color: #ffcc00;
-    border-color: #ffcc00; /* Border color changes on hover */
-    /* Apply hex effect to text */
-  }
-  
-  /* Main Content */
-  .main-content {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: black; /* Make sure the container has a black background */
+}
+
+/* Header styles */
+.header {
+    background-color: black;  /* Black background for header */
+    color: green;  /* Green text for header */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid green; /* Green border under header */
+}
+
+.header h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+/* Navigation styles */
+.navigation {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li {
+    padding: 10px;
+}
+
+.navigation a {
+    color: green;  /* Green text color for links */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for links */
+.navigation a:hover {
+    color: black;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main content section */
+.main-content {
+    flex-grow: 1;
     padding: 20px;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  /* Footer Styling */
-  .footer {
-    background-color: #1e1e1e;
+    background-color: black;  /* Ensure the main content area is also black */
+}
+
+.content {
+    padding: 30px;
+    background-color: black;  /* Keep the content area black */
+    color: lightgreen;  /* Light green text for content */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);  /* Subtle green shadow */
+    border-radius: 10px;
+}
+
+/* Page-specific styles */
+h2 {
+    font-size: 2.5em;
+    color: green;  /* Green heading */
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Footer styles */
+.footer {
+    background-color: black;  /* Set footer background to black */
+    color: green;  /* Green footer text */
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+    margin-top: 20px;
+    border-top: 2px solid green;  /* Green top border for footer */
+}

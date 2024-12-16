@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Use Link from react-router-dom
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 
 // Navigation Button with hex hover effect
-const HoverButton: React.FC<{ text: string }> = ({ text }) => {
+const HoverButton: React.FC<{ text: string; to: string }> = ({ text, to }) => {
   const [displayText, setDisplayText] = useState(text);
 
   // Function to convert text to hex
@@ -27,13 +27,13 @@ const HoverButton: React.FC<{ text: string }> = ({ text }) => {
   };
 
   return (
-    <a
-      href="/"
+    <Link
+      to={to} // Use Link to navigate
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {displayText}
-    </a>
+    </Link>
   );
 };
 
@@ -49,9 +49,9 @@ const App: React.FC = () => {
         {/* Navigation under the header */}
         <nav className="navigation">
           <ul>
-            <li><HoverButton text="Home" /></li>
-            <li><HoverButton text="Projects" /></li>
-            <li><HoverButton text="Resume" /></li>
+            <li><HoverButton text="Home" to="/" /></li>
+            <li><HoverButton text="Projects" to="/projects" /></li>
+            <li><HoverButton text="Resume" to="/resume" /></li>
           </ul>
         </nav>
 

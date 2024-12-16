@@ -1,17 +1,16 @@
+// src/pages/Projects.tsx
+
 import React from 'react';
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
-    <div className="projects">
-      <h1>Projects</h1>
-      <p>Here are some of my recent projects:</p>
-      <ul>
-        <li>Project 1: [Description]</li>
-        <li>Project 2: [Description]</li>
-        <li>Project 3: [Description]</li>
-      </ul>
+    <div className="page-content">
+      <h2>My Projects</h2>
+      <p>Here are some of the projects I've worked on:</p>
+      {/* Add content for your projects */}
     </div>
   );
-}
+};
 
 export default Projects;
+
