@@ -1,0 +1,158 @@
+/* src/index.css */
+
+/* Reset styles for consistent cross-browser appearance */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Root variables for easier customization */
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --link-color: #007bff;
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+  }
+  
+  /* Global Styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Layout and Container Styles */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .header, .footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    flex: 3;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: var(--font-size-lg);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    margin-top: 1rem;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .header, .footer {
+      padding: 1rem;
+    }
+  }
+  
